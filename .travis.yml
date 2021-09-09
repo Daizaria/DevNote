@@ -6,7 +6,7 @@ script:
   - "docker build -t daizaria/ezekiel17/devnote ."
 after_success: 
   - "echo \"$DOCKER_PASSWORD\" | docker login -u \"$DOCKER_ID\" --password-stdin"
-  - "docker push jdiaz67/" 
+  - "docker push daizaria/" 
 deploy: 
   access_key_id: $AWS_ACCESS_KEY
   app: "DevNote"
@@ -17,4 +17,5 @@ deploy:
   region: us-west-2
   secret_access_key: $AWS_SECRET_KEY
   true: development
+
 
