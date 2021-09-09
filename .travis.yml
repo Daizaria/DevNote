@@ -3,7 +3,7 @@ install: skip
 services: 
   - docker
 script:
-  - "docker build --no-cashe -t daizaria/devnote ."
+  - "docker build -t daizaria/devnote ."
 after_success: 
   - "echo \"$DOCKER_PASSWORD\" | docker login -u \"$DOCKER_ID\" --password-stdin"
   - "docker push daizaria/devnote" 
